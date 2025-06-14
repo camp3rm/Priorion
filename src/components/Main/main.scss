@@ -14,34 +14,4 @@
 		margin-bottom: 25px;
 		color: #777777;
 	}
-
-	& .to-do_container {
-		border-radius: 10px;
-		max-width: 660px;
-		width: 100%;
-		min-height: 300px;
-		margin-top: 25px;
-		& .todo-list {
-			& .todo-list_item {
-				padding: 10px;
-				background-color: #15101c;
-				border-radius: 10px;
-				color: #fff;
-				margin: 10px 0;
-				padding: 20px;
-				
-				& .todo-list_item-title,
-				& .todo-list_item-description {
-					color: #9e78cf;
-				}
-				
-				& .todo-list_item-title {
-					margin-bottom: 15px;
-				}
-				& .todo-list_item-description {
-					
-				}
-			}
-		}
-	}
 }

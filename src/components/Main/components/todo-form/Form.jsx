@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import './form.scss';
+import Delete from '../../../../assets/delete.png';
 
 export const Form = ({ todos, setTodos }) => {
 	const [todo, setTodo] = useState({
@@ -27,7 +28,7 @@ export const Form = ({ todos, setTodos }) => {
 		setTodo({ text: '', description: '' });
 	};
 	return (
-		<>
+		<div className="to-do_container">
 			<form
 				className="todos-form"
 				action="/"
@@ -53,6 +54,23 @@ export const Form = ({ todos, setTodos }) => {
 					className="todos-button"
 					type="submit"></button>
 			</form>
-		</>
+				<ul className="todo-list">
+					{todos &&
+						todos.map((item) => (
+							<li
+								className="todo-list_item"
+								key={item.id}>
+								<h4 className="todo-list_item-title">{item.text}</h4>
+								<p className="todo-list_item-description">{item.description}</p>
+								<span className="todo-list_item-delete">
+									<img
+										src={Delete}
+										alt="Delete"
+									/>
+								</span>
+							</li>
+						))}
+				</ul>
+			</div>
 	);
 };
